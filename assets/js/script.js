@@ -10,28 +10,53 @@
         var $body = $("body");
 
         /**
-         * upsells
+         * brands-slider-wrapper
          */
-        var $rtl = ( $body.hasClass("rtl-body") ) ? true : false;
+        var $rtl = ( $body.hasClass("rtl-body") ) ? true : false; console.log($(".brands-slider-wrapper")); 
 
-        $(".single-slider-wrapper").livequery(function(){
+        $(".brands-slider-wrapper").livequery(function(){
 
             $(this).slick({
                 //mobileFirst         : true ,
                 arrows              : true,
-                slidesToShow        : 1,
+                slidesToShow        : 4,
                 slidesToScroll      : 1,
                 dots                : false,
                 //centerMode          : false,
                 rtl                 : $rtl,
                 //swipe               : true ,
                 touchMove           : true ,
-                infinite: true,
-                speed: 500,
-                fade: true,
-                cssEase: 'linear',
+                infinite            : true,
                 prevArrow : '<span class="slide-nav-bt slide-prev"><i class="fa fa-angle-left"></i></span>',
                 nextArrow : '<span class="slide-nav-bt slide-next"><i class="fa fa-angle-right"></i></span>'
+
+                responsive: [
+                  {
+                    breakpoint: 910,
+                    settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 1,
+                    }
+                  },
+                  {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 2, 
+                      slidesToScroll: 1
+                    }
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                  }
+                  // You can unslick at a given breakpoint now by adding:
+                  // settings: "unslick"
+                  // instead of a settings object
+                ]
+
             });
 
         });
@@ -70,7 +95,7 @@
         /**
          * Resize
          */
-        setTimeout(function(){$(window).trigger(window.tg_debounce_resize);}, 2000);
+        //setTimeout(function(){$(window).trigger(window.tg_debounce_resize);}, 2000);
 
         /**
          * Loading

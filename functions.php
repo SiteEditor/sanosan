@@ -17,7 +17,7 @@ function sanosan_enqueue_styles() {
      * Theme Front end main js
      * 'jquery', 'carousel' , 'sed-livequery' , 'jquery-ui-accordion' , 'jquery-ui-tabs'
      */
-    wp_enqueue_script( "sanosan-script" , get_stylesheet_directory_uri() . '/assets/js/script.js' , array( 'jquery', 'carousel' , 'sed-livequery' , 'jquery-ui-accordion' ) , "1.0.0" , true );
+    wp_enqueue_script( "sanosan-script-js" , get_stylesheet_directory_uri() . '/assets/js/script.js' , array( 'jquery', 'carousel' , 'sed-livequery' , 'jquery-ui-accordion' ) , "1.0.0" , true );
 
     //wp_enqueue_script('sed-masonry');
 
