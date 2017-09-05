@@ -28,7 +28,7 @@
                 touchMove           : true ,
                 infinite            : true,
                 prevArrow : '<span class="slide-nav-bt slide-prev"><i class="fa fa-angle-left"></i></span>',
-                nextArrow : '<span class="slide-nav-bt slide-next"><i class="fa fa-angle-right"></i></span>'
+                nextArrow : '<span class="slide-nav-bt slide-next"><i class="fa fa-angle-right"></i></span>',
 
                 responsive: [
                   {
