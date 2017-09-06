@@ -2,19 +2,11 @@
 
     <?php
 
-    $service_sub_title = get_post_meta( get_the_ID(), 'wpcf-service-sub-title', true );
-
     $post_link = apply_filters( "sed_posts_modules_post_permalink" , get_permalink() );
 
-    $post_type_link = get_post_type_archive_link( $post_type );
+    $attachment_id   = (int)get_field( "brand_icon" );
 
-    $attachment_id   = get_post_thumbnail_id();
-
-	$img = get_sed_attachment_image_html( $attachment_id , "" , $images_size );
-
-	$attachment_full_src = wp_get_attachment_image_src( $attachment_id, 'full' ); 
-
-	$attachment_full_src = $attachment_full_src[0];
+	$img = get_sed_attachment_image_html( $attachment_id , "full" );
 
 	//$excerpt_length = 50;
 
@@ -26,34 +18,26 @@
 
     ?>
 
-    <div class="image-content-box-skin1">
-
-        <a href="<?php echo esc_attr( $post_link );?>" class="icb-wrapper">
-            <div class="icb-img">
-                <?php 
+    <div class="brands-slider-item">
+        <div class="tme-wrapper">
+            <div class="tme-img">
+                <a href="<?php esc_attr( esc_url( $post_link ) );?>">
+                    <?php
                     if ( $img ) {
                         echo $img['thumbnail'];
                     }
-                ?>
-                <div class="info">
-                    <div class="info-inner">
-                        <h4><?php the_title();?></h4>   
-                    </div>                  
+                    ?>
+                </a>
+            </div>
+            <div class="tme-heading">
+                <h4><a href="<?php esc_attr( esc_url( $post_link ) );?>"><?php the_title();?></a></h4>
+            </div>
+            <div class="tme-content">
+                <div class="tme-content-inner">
+                    <?php echo $content_post; ?>
                 </div>
             </div>
-            <div class="icb-heading">
-                <div class="icb-heading-inner">
-                    <h4><?php echo $service_sub_title; ?></h4>
-                </div>
-            </div>
-            <div class="general-separator-sm"></div>
-            <div class="icb-content">
-                <div class="icb-content-inner">
-                    <div><?php echo $content_post; ?></div>
-                </div>
-            </div>
-        </a>  
-
-    </div> 
+        </div>
+    </div>
 
 </div> 

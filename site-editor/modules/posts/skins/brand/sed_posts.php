@@ -13,7 +13,7 @@
 
         ?>
 
-        <div class="module-posts-wrap row"> 
+        <div class="brands-slider-wrapper"> 
 
             <?php
             // Start the Loop.

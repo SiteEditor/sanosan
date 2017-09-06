@@ -86,8 +86,8 @@ function sed_sanosan_add_modules( $modules ){
 
     global $sed_pb_modules;
 
-    //$module_name = "themes/sanosan/site-editor/modules/posts/posts.php";
-    //$modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/posts/posts.php', true, true);
+    $module_name = "themes/sanosan/site-editor/modules/posts/posts.php";
+    $modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/posts/posts.php', true, true);
 
     return $modules;
 
