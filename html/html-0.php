@@ -52,7 +52,48 @@
 </div>   
 
 
+<!--============================================-->
+<div class="advertise-posts-wrapper">
 
+	<div class="advertise-posts-wrapper-inner">
+	    <div class="advertise-posts-item video-advertise-posts-item"> 
+	        <div class="tme-wrapper">
+	            <div class="tme-img">
+	                <img src="http://localhost/rang/wp-content/uploads/2017/05/4.jpg" alt="About Me">
+	            </div>
+	        </div>  
+	    </div>  
+
+	    <div class="advertise-posts-item desc-advertise-posts-item"> 
+	        <div class="tme-wrapper">
+	            <div class="tme-img">
+	                <img src="http://localhost/rang/wp-content/uploads/2017/05/4.jpg" alt="About Me">
+	                <div class="tme-desc">Donec quam felis, ultricies nec consequat massa quis enim donec pede justo.</div>
+	            </div>
+	        </div>  
+	    </div> 
+	</div>
+
+	<div class="advertise-posts-wrapper-inner">
+	    <div class="advertise-posts-item desc-advertise-posts-item"> 
+	        <div class="tme-wrapper">
+	            <div class="tme-img">
+	                <img src="http://localhost/rang/wp-content/uploads/2017/05/4.jpg" alt="About Me">
+	                <div class="tme-desc">Donec quam felis, ultricies nec consequat massa quis enim donec pede justo.</div>
+	            </div>
+	        </div>  
+	    </div> 
+
+	    <div class="advertise-posts-item img-advertise-posts-item"> 
+	        <div class="tme-wrapper">
+	            <div class="tme-img">
+	                <img src="http://localhost/rang/wp-content/uploads/2017/05/4.jpg" alt="About Me">
+	            </div>
+	        </div>  
+	    </div> 
+	</div>
+
+</div>  
 
 
 
