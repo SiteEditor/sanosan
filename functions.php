@@ -192,4 +192,9 @@ function sanosan_product_wishlist( $atts ) {
 add_shortcode( 'sanosan_wishlist', 'sanosan_product_wishlist' );
 
 
+/**
+ * Site Editor Shop WooCommerce
+ */
+require dirname(__FILE__) . '/inc/woocommerce.php';
+
 

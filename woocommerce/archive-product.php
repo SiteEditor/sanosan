@@ -63,7 +63,7 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
-				do_action( 'woocommerce_before_shop_loop' );
+				//do_action( 'woocommerce_before_shop_loop' );
 
 				/**
 				 * Using From The Grid
@@ -75,7 +75,7 @@ get_header( 'shop' ); ?>
 				 *
 				 * @hooked woocommerce_pagination - 10
 				 */
-				do_action( 'woocommerce_after_shop_loop' );
+				//do_action( 'woocommerce_after_shop_loop' );
 			?>
 
 		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
