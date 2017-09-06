@@ -176,5 +176,20 @@ function sanosan_per_page_query( $query ) {
 }
 
 
+function sanosan_product_wishlist( $atts ) {
+
+    /*$atts = shortcode_atts( array(
+        'foo' => 'no foo',
+        'baz' => 'default baz'
+    ), $atts, 'bartag' );*/
+
+    $tg_el = The_Grid_Elements();
+
+    return $tg_el->get_product_wishlist();
+
+}
+
+add_shortcode( 'sanosan_wishlist', 'sanosan_product_wishlist' );
+
 
 
