@@ -1062,6 +1062,63 @@ a:active {
     margin: 0 0 5px;
 }
 
+/**************************/
+
+
+body .yith-wcwl-add-to-wishlist {
+  width: 1em;
+  height: 25px;
+  margin: 0;
+  display: block;
+  vertical-align: top;
+  overflow: hidden;
+  line-height: 30px !important;
+}
+
+body .yith-wcwl-add-to-wishlist .show a {
+  font-size: 0;
+  -webkit-transition: margin-left .4s ease .4s;
+  -moz-transition: margin-left .4s ease .4s;
+  -ms-transition: margin-left .4s ease .4s;
+  -o-transition: margin-left .4s ease .4s;
+  transition: margin-left .4s ease .4s;
+  text-align: center;
+  display: block;
+}
+
+body .yith-wcwl-add-to-wishlist .show {
+  position: relative
+}
+
+body .yith-wcwl-add-to-wishlist .show a:before {
+  font-family: FontAwesome;
+  content: "\f08a";
+  line-height: inherit;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+body .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show span:before,
+body .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse.show a:before {
+  content: "\f004";
+  color: #1c3788;
+  font-family: FontAwesome;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: inherit
+}
+
+body .yith-wcwl-add-to-wishlist .show img {
+  position: absolute;
+  top: 12px;
+  left: 9px;
+  z-index: 10
+}
+
+body .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse,
+body .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse {
+  font-size: 0
+}
 
 
 
