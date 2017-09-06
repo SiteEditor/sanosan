@@ -26,71 +26,46 @@
         </div>  
     </div> 
 
-    <div class="brands-slider-item"> 
+</div>    
+
+<!--============================================-->
+<div class="news-slider-wrapper">
+
+    <div class="news-slider-item"> 
         <div class="tme-wrapper">
             <div class="tme-img">
                 <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
-            </div>
-            <div class="tme-heading">
-                <h4>Donec quam felis, ultricies nec</h4>
-            </div>
-            <div class="tme-content">
-                <div class="tme-content-inner">
-                    <p>Donec quam felis, ultricies nec, pellentesque eu.</p>
+                <div class="tme-info">
+	                <div class="tme-info-inner">
+			            <div class="tme-info-content">
+			                <h4  class="tme-heading">Donec quam felis, ultricies nec</h4>
+			                <div class="tme-content">Donec quam felis, ultricies nec, pellentesque eu.</div>
+			                <div class="tme-date">1396/06/15</div>
+			                <div class="tme-btn"><a href="" class="text-first-main">Read More</a></div>
+			            </div>
+	                </div>
                 </div>
             </div>
         </div>  
     </div> 
 
-    <div class="brands-slider-item"> 
-        <div class="tme-wrapper">
-            <div class="tme-img">
-                <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
-            </div>
-            <div class="tme-heading">
-                <h4>Donec quam felis, ultricies nec</h4>
-            </div>
-            <div class="tme-content">
-                <div class="tme-content-inner">
-                    <p>Donec quam felis, ultricies nec, pellentesque eu.</p>
-                </div>
-            </div>
-        </div>  
-    </div> 
+</div>   
 
-    <div class="brands-slider-item"> 
-        <div class="tme-wrapper">
-            <div class="tme-img">
-                <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
-            </div>
-            <div class="tme-heading">
-                <h4>Donec quam felis, ultricies nec</h4>
-            </div>
-            <div class="tme-content">
-                <div class="tme-content-inner">
-                    <p>Donec quam felis, ultricies nec, pellentesque eu.</p>
-                </div>
-            </div>
-        </div>  
-    </div> 
 
-    <div class="brands-slider-item"> 
-        <div class="tme-wrapper">
-            <div class="tme-img">
-                <img src="http://localhost/rang/wp-content/uploads/2017/05/8.jpg" alt="About Me">
-            </div>
-            <div class="tme-heading">
-                <h4>Donec quam felis, ultricies nec</h4>
-            </div>
-            <div class="tme-content">
-                <div class="tme-content-inner">
-                    <p>Donec quam felis, ultricies nec, pellentesque eu.</p>
-                </div>
-            </div>
-        </div>  
-    </div> 
 
-</div>     
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--============================================-->

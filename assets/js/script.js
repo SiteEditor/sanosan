@@ -62,6 +62,41 @@
         });
 
 
+
+        $(".news-slider-wrapper").livequery(function(){
+
+            $(this).slick({
+                //mobileFirst         : true ,
+                arrows              : true,
+                slidesToShow        : 2,
+                slidesToScroll      : 1,
+                dots                : false,
+                //centerMode          : false,
+                rtl                 : $rtl,
+                //swipe               : true ,
+                touchMove           : true ,
+                infinite            : true,
+                prevArrow : '<span class="slide-nav-bt slide-prev"><i class="fa fa-angle-left"></i></span>',
+                nextArrow : '<span class="slide-nav-bt slide-next"><i class="fa fa-angle-right"></i></span>',
+
+                responsive: [
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                  }
+                  // You can unslick at a given breakpoint now by adding:
+                  // settings: "unslick"
+                  // instead of a settings object
+                ]
+
+            });
+
+        });
+
+
         /**
          * FAQ Accordion
          */
