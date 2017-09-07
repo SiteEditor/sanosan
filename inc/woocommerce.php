@@ -76,7 +76,7 @@ class SedShopWoocommerceSingleProductModule{
 
         //remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
         remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
-        //remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
         //remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
         remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
         remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
@@ -107,14 +107,14 @@ class SedShopWoocommerceSingleProductModule{
 
     public static function sub_title(){
 
-        $second_title = get_post_meta( get_the_ID() , 'wpcf-product-second-title' , true );
+        $second_title = get_field( 'product_sub_title' );
 
         $second_title = trim( $second_title );
 
         if( !empty( $second_title ) ) {
             ?>
 
-            <h4 class="product-second-title"><?php echo $second_title; ?></h4>
+            <span class="product-second-title"><?php echo $second_title; ?></span>
 
             <?php
         }
@@ -138,7 +138,7 @@ class SedShopWoocommerceSingleProductModule{
 
         remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
-        remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+        //remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
     }
 
