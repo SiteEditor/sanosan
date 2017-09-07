@@ -1546,38 +1546,100 @@ body #grid-235 .tg-grid-area-top2 {
 /**************************************/
 
 .agancy-post-container {
-  
+    border: 1px solid #ccc;
 }
 
 .agancy-post-container .agancy-post-item {
     width: 100%;
     display: table;
+    border-bottom: 1px solid #ccc;
+}
+
+.agancy-post-container .agency:last-child .agancy-post-item {
+    border-bottom: 0 none;
 }
 
 .agancy-post-container .agancy-post-item .agancy-post-els {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: middle; 
+    padding: 10px;
 }
 
 .agancy-post-container .agancy-post-item .agancy-col-address {
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
-body.rtl .tg-icon-dropdown-open {
-    position: absolute;
-    margin: 0;
-    left: 0;
-    padding: 5px;
-    top: 0;
-    border-right: 1px solid #ccc;
-    background-color: #f9fafe;
-    color: #1e398a !important;
+.agancy-post-container .agancy-post-item .agancy-col-number ,
+.agancy-post-container .agancy-post-item .agancy-col-map {
+    background-color: #f4f7fc;
+    text-align: center;    
+    width: 60px;
 }
 
+.agancy-post-container .agancy-post-item .agancy-col-map .map-icon {
+    padding: 0;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: initial; 
+    background-image: url(images/map.png);     
+    background-size: contain;
+} 
 
 
+.agancy-filters-container {
+    margin-bottom: 40px;
+}
 
+.agancy-filters-container > form > ul {
+    margin-right: -30px;
+}
+
+.agancy-filters-container > form > ul:after {
+    clear: both;
+}
+
+.agancy-filters-container > form > ul:after,
+.agancy-filters-container > form > ul:before {
+    content: "";
+    display: table;
+}
+
+.agancy-filters-container > form > ul > li {
+    width: 33.33333333%;
+    display: table;
+    font-size: 0;
+    float: left;
+    padding: 0 30px;
+}
+
+.agancy-filters-container > form > ul > label,
+.agancy-filters-container > form > ul > li > h4 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.agancy-filters-container > form > ul > li > h4 {
+  width: 90px;
+  font-size: 14px;
+  padding: 0 25px;
+}
+
+.agancy-filters-container > form > ul > li > label {
+  width: 100%;
+}
+
+.agancy-filters-container > form > ul > li > label > select.sf-input-select {
+  width: 100%;
+}
 
 
 
