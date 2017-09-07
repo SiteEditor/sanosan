@@ -127,7 +127,7 @@
             <div class="col-sm-7"> 
 	            <div class="tme-heading">
 	                <div class="tme-heading-inner">
-	                    <h4>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.</h5>
+	                    <h4>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.</h4>
 	                </div>
 	            </div>
 	            <div class="tme-content">
@@ -145,7 +145,7 @@
             <div class="col-sm-7"> 
 	            <div class="tme-heading">
 	                <div class="tme-heading-inner">
-	                    <h4>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.</h5>
+	                    <h4>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim donec pede justo.</h4>
 	                </div>
 	            </div>
 	            <div class="tme-content">
