@@ -1,75 +1,105 @@
-<div class="image-content-box col-sm-3">
+<?php
 
-    <?php
+    $advertise_type = get_field('advertise_type');
 
-    $our_team_sub_title = get_post_meta( get_the_ID(), 'wpcf-our-team-sub-title', true );
+    $advertise_type = !$advertise_type ? "image" : $advertise_type;
 
-    $wpcf_social_icon = get_post_meta( get_the_ID(), 'wpcf-social-icon', false );
+    $type_class = "";
 
-    $wpcf_social_link = get_post_meta( get_the_ID(), 'wpcf-social-link', false );
+    switch ($advertise_type){
 
+        case "image":
 
-    $post_link = apply_filters( "sed_posts_modules_post_permalink" , get_permalink() );
+            $type_class = "img-advertise-posts-item";
 
-    $post_type_link = get_post_type_archive_link( $post_type );
+            break;
 
-    $attachment_id   = get_post_thumbnail_id();
+        case "video":
 
-	$img = get_sed_attachment_image_html( $attachment_id , "" , $images_size );
+            $type_class = "video-advertise-posts-item";
 
-	$attachment_full_src = wp_get_attachment_image_src( $attachment_id, 'full' ); 
+            break;
 
-	$attachment_full_src = $attachment_full_src[0];
+        case "text_image":
 
-	//$excerpt_length = 50;
+            $type_class = "desc-advertise-posts-item";
 
-    $content_post = apply_filters('the_excerpt', get_the_excerpt());
+            break;
 
-    # FILTER EXCERPT LENGTH
-    if( strlen( $content_post ) > $excerpt_length )
-        $content_post = mb_substr( $content_post , 0 , $excerpt_length - 3 ) . '...';
+    }
 
-    ?>
+?>
 
+<div class="advertise-posts-item <?php echo esc_attr( $type_class );?>">
+    <div class="tme-wrapper">
+        <div class="tme-img">
 
-    <div class="image-content-box-skin2">
-        <div class="icb-wrapper">
-            <div class="icb-img">
-                <?php 
-                    if ( $img ) {
-                        echo $img['thumbnail'];
-                    }
+            <?php
+
+            if( $advertise_type == "video" ) {
+
+                $self_hosted_video = get_field("ads_self_hosted_video");
+
+                $poster_url = get_the_post_thumbnail_url(get_the_ID(), "full");
+
+                if (!$poster_url) {
+                    $poster_url = "";
+                }
+
+                if (!empty($self_hosted_video)) {
+
+                    echo do_shortcode('[video src="' . $self_hosted_video["url"] . '" poster="' . $poster_url . '"]');
+
+                } else {
+
+                    $external_video_code = get_field("ads_external_video");
+
+                    echo $external_video_code;
+
+                }
+
+            }else{
+
+                $attachment_id   = get_post_thumbnail_id();
+
+                $custom_images_size = "";
+
+                $images_size = "";
+
+                if( $advertise_type == "text_image" ){
+
+                    $images_size = "full";
+
+                }else if( $advertise_type == "image" ){
+
+                    $custom_images_size = "500X300";
+
+                }
+
+                $img = get_sed_attachment_image_html( $attachment_id , $images_size , $custom_images_size );
+
+                if ( $img ) {
+                    echo $img['thumbnail'];
+                }
+
+            }
+
+            if( $advertise_type == "text_image" ) {
+
+                /*$content_post = apply_filters('the_excerpt', get_the_excerpt());
+
+                # FILTER EXCERPT LENGTH
+                if( strlen( $content_post ) > $excerpt_length )
+                    $content_post = mb_substr( $content_post , 0 , $excerpt_length - 3 );*/
+
                 ?>
-                <div class="info">
-                    <div class="info-inner">    
-                        <div class="info-heading">
-                            <h4><?php the_title();?></h4>  
-                            <span><?php echo $our_team_sub_title; ?></span>
-                        </div>  
-                        <div class="info-spr"></div>
-                        <div class="info-content">
-                            <div><?php echo $content_post; ?></div>
-                            <div class="info-social-bar">
-                                <?php
 
-                                    foreach ($wpcf_social_icon as $key => $value) {
+                <div class="tme-desc"><?php the_content(); ?></div>
 
-                                        $link = (isset($wpcf_social_link[$key])) ? $wpcf_social_link[$key] : "javascript:void(0);";
+                <?php
+            }
+            ?>
 
-                                        ?>
-
-                                        <a href="<?php echo $link; ?>" class="social-bar-item fa fa-<?php echo esc_attr($value); ?>"></a>
-
-                                        <?php
-                                    }
-                                ?>    
-                            </div>
-                        </div>
-                    </div>                  
-                </div>
-            </div>
-        </div>  
-    </div> 
-
-
-</div> 
+        </div>
+    </div>
+</div>

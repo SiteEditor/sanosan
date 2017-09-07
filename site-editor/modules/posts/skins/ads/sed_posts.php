@@ -13,15 +13,34 @@
 
         ?>
 
-        <div class="module-posts-wrap row"> 
+        <div class="advertise-posts-wrapper">
 
             <?php
+            $num = 1;
+            $total = $custom_query->post_count;
             // Start the Loop.
             while ( $custom_query->have_posts() ){
                 $custom_query->the_post();
 
+                if( $num % 2 == 1 ){
+
+                    ?>
+                    <div class="advertise-posts-wrapper-inner">
+                    <?php
+
+                }
+
                 include dirname(__FILE__) . '/content.php';
 
+                if( $num % 2 == 0 || $total == $num ){
+
+                    ?>
+                    </div>
+                    <?php
+
+                }
+
+                $num++;
             }
 
             ?>
