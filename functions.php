@@ -191,6 +191,39 @@ function sanosan_product_wishlist( $atts ) {
 
 add_shortcode( 'sanosan_wishlist', 'sanosan_product_wishlist' );
 
+/**
+ * Search & Filter Pro Update mata fields before render
+ *
+ * @param $input_object
+ * @param $sfid
+ * @return mixed
+ */
+function filter_function_name($input_object, $sfid){
+
+    if( $input_object['name'] == '_sfm_agancy_brand' ) {
+
+        //var_dump( $input_object );//udpate this field before rendering
+
+        $options = $input_object['options'];
+
+        foreach ( $options AS $key => $option ){
+
+            $post_id = (int) $option->value;
+
+            if( $post_id ) {
+
+                $input_object['options'][$key]->label = get_the_title($post_id);
+
+            }
+
+        }
+
+    }
+
+    return $input_object;
+}
+
+add_filter('sf_input_object_pre', 'filter_function_name', 10, 2);
 
 /**
  * Site Editor Shop WooCommerce
