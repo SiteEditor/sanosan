@@ -100,14 +100,13 @@
         /**
          * FAQ Accordion
          */
-
-        var _faqAccordionEl = $(".sed-shop-faq-wrapper-inner");
+        var _faqAccordionEl = $(".sed-shop-faq-wrapper");
 
         _faqAccordionEl.accordion({
             heightStyle     : "content",
             active          : 0,
             collapsible     : true,
-            icons           :false
+            icons           :false 
         });
 
 
