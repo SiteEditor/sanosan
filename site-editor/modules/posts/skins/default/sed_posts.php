@@ -13,7 +13,7 @@
 
         ?>
 
-        <ul>
+        <div class="news-slider-wrapper">
 
             <?php
             // Start the Loop.
@@ -26,7 +26,7 @@
 
             ?>
 
-        </ul>
+        </div>
 
         <?php
 

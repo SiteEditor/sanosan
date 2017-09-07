@@ -85,12 +85,6 @@ class PBPostsShortcode extends PBShortcodeClass{
         $this->set_vars( array( "args" => $args ) );
 
     }
-    
-    function styles(){
-        return array(
-            array('posts-skin-default', get_stylesheet_directory_uri().'/site-editor/modules/posts/skins/default/css/style.css' ,'1.0.0' ) ,
-        );
-    }
 
     function shortcode_settings(){
 
