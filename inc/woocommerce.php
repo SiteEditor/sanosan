@@ -31,6 +31,8 @@ class SedShopWooCommerce{
 
         $this->remove_breadcrumb();
 
+        add_shortcode( 'sano_featured_products'  , __CLASS__ . '::featured_products' );
+
     }
 
     public function remove_breadcrumb(){
@@ -38,7 +40,6 @@ class SedShopWooCommerce{
         remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
     }
-
 
 }
 
@@ -66,6 +67,26 @@ class SedShopWoocommerceSingleProductModule{
         $this->remove_details_products();
 
         add_filter( "woocommerce_product_thumbnails_columns" , array( __CLASS__ , "get_thumbnails_columns" ) );
+
+        add_filter( "woocommerce_product_tabs" , array( __CLASS__ , "woocommerce_product_tabs" ) );
+
+        add_filter( "woocommerce_product_description_heading" , array( __CLASS__ , "tabs_remove_heading" ) );
+
+        //add_filter( "woocommerce_product_description_heading" , array( __CLASS__ , "tabs_remove_heading" ) );
+
+    }
+
+    public static function woocommerce_product_tabs( $tabs ){
+
+        unset( $tabs['additional_information'] );
+
+        return $tabs;
+
+    }
+
+    public static function tabs_remove_heading( $heading ){
+
+        return false;
 
     }
 
