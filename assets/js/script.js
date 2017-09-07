@@ -125,6 +125,26 @@
             icons           : false
         });
 
+        /**
+         * Agency Single Page open
+         */
+        $(".agancy-col-map > a").on("click", function(e){
+
+            e.preventDefault();
+
+            var _href = $(this).attr("href"),
+                _width = $(window).width(),
+                _height = $(window).height();
+
+            var _nwidth = _width > 1100 ? 1100 : _width,
+                _nheight = _height > 350 ? 350 : _height,
+                _left = Math.floor( (_width - _nwidth) / 2 ),
+                _top = Math.floor( (_height - _nheight) / 2 );
+
+            window.open( _href , "_blank" , "toolbar=yes,scrollbars=yes,resizable=yes,top=" + _top + ",left=" + _left + ",width=" + _nwidth + ",height=" + _nheight );
+
+        });
+
 
         /**
          * Resize

@@ -93,7 +93,11 @@ get_header(); ?>
 
 								<div class="agancy-col-address agancy-post-els"><?php echo $address;?></div>
 
-								<div class="agancy-col-map agancy-post-els"><span class="map-icon"></span></div>
+								<div class="agancy-col-map agancy-post-els">
+									<a href="<?php the_permalink();?>">
+										<span class="map-icon"></span>
+									</a>
+								</div>
 
 							</div>
 
