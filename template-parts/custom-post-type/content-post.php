@@ -20,7 +20,7 @@
 	        <div class="single-heading">
 	            <div class="single-heading-inner">
 	                <h3><?php the_title(); ?></h3>
-	                <span><?php _e("By","twentyseventeen") ?>&nbsp;<span class="single-author"><?php the_author(); ?></span></span>
+	                <div class="single-date"><?php echo the_date("Y/m/d"); ?></div>
 	            </div>
 	        </div>
 	        <div class="single-img">        	
