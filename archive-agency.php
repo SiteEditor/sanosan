@@ -87,13 +87,13 @@ get_header(); ?>
 						?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-							<div class="row">
+							<div class="agancy-post-item">
 
-								<div class="agancy-col-number col-sm-2"><?php echo $wp_query->current_post + 1;?></div>
+								<div class="agancy-col-number agancy-post-els"><?php echo $wp_query->current_post + 1;?></div>
 
-								<div class="agancy-col-address col-sm-8"><?php echo $address;?></div>
+								<div class="agancy-col-address agancy-post-els"><?php echo $address;?></div>
 
-								<div class="agancy-col-map col-sm-2"><span class="map-icon"></span></div>
+								<div class="agancy-col-map agancy-post-els"><span class="map-icon"></span></div>
 
 							</div>
 

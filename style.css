@@ -1543,11 +1543,37 @@ body #grid-235 .tg-grid-area-top2 {
 }
 
 
+/**************************************/
 
+.agancy-post-container {
+  
+}
 
+.agancy-post-container .agancy-post-item {
+    width: 100%;
+    display: table;
+}
 
+.agancy-post-container .agancy-post-item .agancy-post-els {
+    display: table-cell;
+    vertical-align: middle;
+}
 
+.agancy-post-container .agancy-post-item .agancy-col-address {
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
 
+body.rtl .tg-icon-dropdown-open {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    padding: 5px;
+    top: 0;
+    border-right: 1px solid #ccc;
+    background-color: #f9fafe;
+    color: #1e398a !important;
+}
 
 
 
