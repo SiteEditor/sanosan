@@ -20,7 +20,7 @@ get_header(); ?>
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/custom-post-type/single-post-gallery' );
+					get_template_part( 'template-parts/custom-post-type/single-post-brand' );
 
 					/**
 					 * Comments

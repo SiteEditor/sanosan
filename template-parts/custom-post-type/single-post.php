@@ -22,20 +22,17 @@
 	                <h4 class="text-first-main"><?php the_title(); ?></h4>
 	            </div>
 	        </div>
-	        <!--<div class="single-img">        	
-	        	<?php //if ( '' !== get_the_post_thumbnail() ) : ?>
-	                <?php //the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
-	            <?php //endif; ?>
-	        </div>-->
+	        <div class="single-img">
+	        	<?php if ( '' !== get_the_post_thumbnail() ) : ?>
+	                <?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
+	            <?php endif; ?>
+	        </div>
 	        <div class="single-content">
 	            <div class="single-content-inner">
 					<div>  
 						<?php
 							/* translators: %s: Name of current post */
-							the_content( sprintf(
-								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-								get_the_title()
-							) );
+							the_content( );
 						?>
 					</div><!-- the_content -->     
 	            </div>
