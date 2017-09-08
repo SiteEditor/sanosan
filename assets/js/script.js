@@ -12,7 +12,7 @@
         /**
          * brands-slider-wrapper
          */
-        var $rtl = ( $body.hasClass("rtl-body") ) ? true : false; console.log($(".brands-slider-wrapper")); 
+        var $rtl = ( $body.hasClass("rtl-body") ) ? true : false; //console.log($(".brands-slider-wrapper"));
 
         $(".brands-slider-wrapper").livequery(function(){
 
@@ -111,21 +111,6 @@
 
 
         /**
-         * Terms Accordion
-         */
-
-        var _termsAccordionEl = $(".module-terms-inner");
-
-        _termsAccordionEl.accordion({
-            heightStyle     : "content",
-            header          : ".header-terms",
-            collapsible     : true,
-            active          : false,
-            collapsible     : true,
-            icons           : false
-        });
-
-        /**
          * Agency Single Page open
          */
         $(".agancy-col-map > a").on("click", function(e){
@@ -149,7 +134,7 @@
         /**
          * Resize
          */
-        setTimeout(function(){$(window).trigger(window.tg_debounce_resize);}, 2000);
+        //setTimeout(function(){$(window).trigger(window.tg_debounce_resize);}, 2000);
 
         /**
          * Loading

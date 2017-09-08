@@ -34,7 +34,7 @@ get_header(); ?>
 							<?php
 							$address = get_field( 'agancy_address' );
 
-							echo do_shortcode( '[sed_google_map setting_address="'.esc_attr( $address ).'"][/sed_google_map]' );
+							echo do_shortcode( '[sed_google_map setting_height="350" setting_description="'.esc_attr( get_the_title() ).'" setting_address="'.esc_attr( $address ).'"][/sed_google_map]' );
 							?>
 						</div>
 
