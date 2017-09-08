@@ -32,6 +32,61 @@
 
 <div class="advertise-posts-item <?php echo esc_attr( $type_class );?>">
     <div class="tme-wrapper">
+
+        <?php
+
+        if( $advertise_type == "video" ) {
+
+        ?>    
+            <div id="sed-dialog-popup" class="sed-dialog-popup">
+
+                <div class="sed-dialog-popup-inner">
+
+                    <header class="sed-dialog-popup-header">
+
+                        <div class="sed-dialog-popup-close"></div>
+                        
+                    </header>
+
+                    <div class="sed-dialog-popup-content-wrap">
+
+                        <?php
+
+                        $self_hosted_video = get_field("ads_self_hosted_video");
+
+                        $poster_url = get_the_post_thumbnail_url(get_the_ID(), "full");
+
+                        if (!$poster_url) {
+                            $poster_url = "";
+                        }
+
+                        if (!empty($self_hosted_video)) {
+
+                            echo do_shortcode('[video src="' . $self_hosted_video["url"] . '" poster="' . $poster_url . '"]');
+
+                        } else {
+
+                            $external_video_code = get_field("ads_external_video");
+
+                            echo $external_video_code;
+
+                        }
+
+                        ?>
+
+                    </div>
+
+                </div>
+                
+            </div>        
+
+
+        <?php
+
+        }
+        
+        ?>
+
         <div class="tme-img">
 
             <?php
@@ -56,57 +111,6 @@
 
             if ( $img ) {
                 echo $img['thumbnail'];
-            }
-
-
-            if( $advertise_type == "video" ) {
-
-            ?>    
-                <div id="sed-dialog-popup" class="sed-dialog-popup">
-
-                    <div class="sed-dialog-popup-inner">
-
-                        <header class="sed-dialog-popup-header">
-
-                            <div class="sed-dialog-popup-close"></div>
-                            
-                        </header>
-
-                        <div class="sed-dialog-popup-content-wrap">
-
-                            <?php
-
-                            $self_hosted_video = get_field("ads_self_hosted_video");
-
-                            $poster_url = get_the_post_thumbnail_url(get_the_ID(), "full");
-
-                            if (!$poster_url) {
-                                $poster_url = "";
-                            }
-
-                            if (!empty($self_hosted_video)) {
-
-                                echo do_shortcode('[video src="' . $self_hosted_video["url"] . '" poster="' . $poster_url . '"]');
-
-                            } else {
-
-                                $external_video_code = get_field("ads_external_video");
-
-                                echo $external_video_code;
-
-                            }
-
-                            ?>
-
-                        </div>
-
-                    </div>
-                    
-                </div>        
-
-
-            <?php
-
             }
             
 

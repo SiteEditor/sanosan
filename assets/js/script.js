@@ -136,25 +136,36 @@
          * Single Products
          */
 
-        var dialog_btn = $(".advertise-posts-wrapper .advertise-posts-item.video-advertise-posts-item");
+        var dialog_btn = $(".advertise-posts-wrapper .advertise-posts-item.video-advertise-posts-item .tme-img"),
+            $dialog = $("#sed-dialog-popup"),
+            $dialog_close = $(".sed-dialog-popup-close");
+
 
         dialog_btn.on("click" , function(){
 
-            var $dialog = $("#sed-dialog-popup");
-
             $dialog.addClass( 'active' );
+            $("#sed-dialog-popup .wp-video-shortcode").click();
 
         });
 
-        $(".sed-dialog-popup-close").on("click" , function(){
-            $("#sed-dialog-popup").removeClass( 'active' );
+        $dialog_close.on("click" , function(){
+            $dialog.removeClass( 'active' );
+
+            if ($("#sed-dialog-popup .mejs-container .mejs-controls .mejs-playpause-button").hasClass("mejs-pause")){
+                $("#sed-dialog-popup .wp-video-shortcode").click();    
+            }
+            
         });
 
-        $("#sed-dialog-popup").on('click', function (e) {
+        $dialog.on('click', function (e) {
 
             if ( !$(e.target).hasClass("sed-dialog-popup-inner") && $(e.target).parents(".sed-dialog-popup-inner:first").length == 0 ) {
 
                 $(this).removeClass( 'active' );
+
+                if ($("#sed-dialog-popup .mejs-container .mejs-controls .mejs-playpause-button").hasClass("mejs-pause")){
+                    $("#sed-dialog-popup .wp-video-shortcode").click();
+                }
             }
 
         });
@@ -163,7 +174,7 @@
         /**
          * Resize
          */
-        setTimeout(function(){$(window).trigger(window.tg_debounce_resize);}, 2000);
+        setTimeout(function(){$(window).trigger(window.tg_debounce_resize);}, 3000);
 
         /**
          * Loading
@@ -172,7 +183,7 @@
         var removePreloader = function() {
             setTimeout(function() {
                 jQuery('.preloader').hide();
-            }, 1500);
+            }, 3000);
         };
 
         removePreloader();

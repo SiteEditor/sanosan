@@ -200,14 +200,14 @@ class SedShopWoocommerceArchiveModule{
 
     public static function loop_shop_per_page( $per_page ) {
 
-        $per_page = 6;
+        $per_page = 8;
 
         return $per_page;
     }
 
     public static function loop_columns( $columns ) {
 
-        $columns = 3;
+        $columns = 4;
 
         return $columns;
     }
