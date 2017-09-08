@@ -131,10 +131,39 @@
         });
 
 
+
+        /**
+         * Single Products
+         */
+
+        var dialog_btn = $(".advertise-posts-wrapper .advertise-posts-item.video-advertise-posts-item");
+
+        dialog_btn.on("click" , function(){
+
+            var $dialog = $("#sed-dialog-popup");
+
+            $dialog.addClass( 'active' );
+
+        });
+
+        $(".sed-dialog-popup-close").on("click" , function(){
+            $("#sed-dialog-popup").removeClass( 'active' );
+        });
+
+        $("#sed-dialog-popup").on('click', function (e) {
+
+            if ( !$(e.target).hasClass("sed-dialog-popup-inner") && $(e.target).parents(".sed-dialog-popup-inner:first").length == 0 ) {
+
+                $(this).removeClass( 'active' );
+            }
+
+        });
+
+
         /**
          * Resize
          */
-        //setTimeout(function(){$(window).trigger(window.tg_debounce_resize);}, 2000);
+        setTimeout(function(){$(window).trigger(window.tg_debounce_resize);}, 2000);
 
         /**
          * Loading

@@ -1264,7 +1264,7 @@ body .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse {
     background-size: 50px auto;
 }
 
-
+.advertise-posts-wrapper .advertise-posts-item.video-advertise-posts-item ,
 .advertise-posts-wrapper .advertise-posts-item.desc-advertise-posts-item {
     background-color: #f5f5f5;
     text-align: center;
@@ -1496,6 +1496,10 @@ html body .gform_wrapper ul.gform_fields li.gfield {
     padding-right: 8px !important;
 }
 
+html body .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    padding: 0.5em 0.7em;
+}
+
 /*************************************/
 
 body.rtl .tg-dropdown-holder {
@@ -1540,6 +1544,21 @@ body.rtl .tg-grid-area-top2>div:last-child {
 body #grid-235 .tg-grid-area-top2 {
     text-align: center; 
     margin-bottom: 40px;
+}
+
+body.rtl .tg-grid-slider {
+    direction: ltr !important;
+}
+
+/****************************/
+
+.sano_brand .brand-icon-wrapper img {
+    margin: 0 auto;
+    display: block;
+}
+
+.sano_brand .general-separator {
+    margin: 30px auto;
 }
 
 
@@ -1673,7 +1692,7 @@ body.woocommerce-page div.product div.summary {
     width: 58%;
 }
 
-body.single.single-product #main > .product * {
+body.single.single-product #main > .product  {
     color: #1c3788;
 }
 
@@ -1705,6 +1724,10 @@ body.single.single-product .woocommerce-tabs .tabs.wc-tabs {
 body.rtl .woocommerce-tabs li {
     margin-left: 1em;
     margin-right: 0;
+}
+
+.woocommerce-tabs li a {
+    color: #1c3788;
 }
 
 body.single.single-product .woocommerce-product-gallery .flex-viewport {
@@ -1789,4 +1812,266 @@ th > p {
     color: #ddc885;
 }
 
+
+/********************************************/
+
+
+.woocommerce .woocommerce-Reviews .woocommerce-Reviews-title {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    color: #1c3788;
+}
+
+.woocommerce .woocommerce-Reviews .commentlist .comment_container {
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    padding: 25px 0px
+}
+
+.woocommerce .woocommerce-Reviews .commentlist .comment_container img {
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    height: 55px;
+    width: 55px;
+    margin-right: 20px;
+}
+
+.rtl.woocommerce .woocommerce-Reviews .commentlist .comment_container img {
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+
+.rtl.woocommerce #content div.product #reviews .comment img, 
+.rtl.woocommerce div.product #reviews .comment img, 
+.rtl.woocommerce-page #content div.product #reviews .comment img, 
+.rtl.woocommerce-page div.product #reviews .comment img {
+    float: right;  
+}
+
+.woocommerce .woocommerce-Reviews .commentlist .comment_container .comment-text .star-rating {
+    float: right;
+}
+
+.rtl.woocommerce .woocommerce-Reviews .commentlist .comment_container .comment-text .star-rating {
+    float: left 
+}
+
+.woocommerce .woocommerce-Reviews .commentlist .comment_container .comment-text .meta strong {
+    color: #1c3788;
+    font-size: 12px;
+}
+
+.woocommerce .woocommerce-Reviews .commentlist .comment_container .comment-text .meta time {
+    color: #a7a7a7;
+    font-size: 12px 
+}
+
+.woocommerce .woocommerce-Reviews .commentlist .comment_container .comment-text .description > p {
+    color: #1c3788;
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .stars {
+    position: relative;
+    height: 20px;
+    width: 85px
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .stars a {
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    font-size: 15px
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .stars a:hover,
+.woocommerce .woocommerce-Reviews .review_form_wrapper .stars a:focus,
+.woocommerce .woocommerce-Reviews .review_form_wrapper .stars a.selected {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .stars .star-0 {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .comment-reply-title {
+    color: #333;
+    font-size: 17px;
+    margin-bottom: 30px;
+    margin-top: 40px
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .commentlist {
+    padding: 0 15px
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .form-group.comment-form-rating {
+    height: 53px
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .comment-form {
+    margin: 0 -8px
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .required {
+    color: #ff1d0d
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .comment-textarea,
+.woocommerce .woocommerce-Reviews .review_form_wrapper .comment-input > .form-group {
+    padding: 0 8px
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .comment-textarea-login {
+    width: 100% !important;
+    max-width: 100%;
+    padding: 0
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .comment-textarea textarea {
+    min-height: 100px;
+    padding: 10px
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .form-group {
+    margin-bottom: 10px
+}
+
+.woocommerce .woocommerce-Reviews .review_form_wrapper .form-control {
+    width: 100%
+}
+
+
+/***********************************/
+
+/*div#mep_0 {
+    width: 1300px !important;
+    height: 500px !important;
+}*/
+
+body .wp-video ,
+body .mejs-container {  
+    margin: 0;
+    width: 100% !important;
+} 
+
+body .mejs-offscreen {
+    clip: inherit;
+    clip: inherit;
+    clip-path: none;
+}    
+
+body .mejs-container,  
+body .mejs-embed, 
+body .mejs-embed body {  
+    background: #ebe0de; 
+}  
+
+body .mejs-container .mejs-controls {
+    background-color: transparent;
+    height: 40px;
+    padding: 0 15px;
+}
+
+body .mejs-controls .mejs-time-rail .mejs-time-total {
+    margin: 9px 5px;
+}    
+
+body .mejs-container .mejs-controls .mejs-time {
+    color: #949496;
+}  
+
+body .mejs-controls .mejs-time-rail .mejs-time-current {
+    background: #bf1e2e;
+}
+
+body .mejs-controls .mejs-time-rail .mejs-time-loaded {
+  background: #949496;
+}
+
+body .mejs-controls .mejs-time-rail span, 
+body .mejs-controls .mejs-time-rail a {
+    height: 2px;  
+}
+
+body .mejs-controls .mejs-time-rail .mejs-time-current {
+    height: 6px;
+    margin-top: -2px;
+}
+
+/*body .mejs-controls .mejs-button button {
+  background-image: url(images/controls.svg);
+}
+
+body .mejs-overlay-button {
+    background-image: url(images/bigplay.svg);
+}*/
+
+
+/**************************/
+.sed-dialog-popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    z-index: 1000000;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+}
+
+.sed-dialog-popup.active {
+  display: block;
+    opacity: 1;
+}
+
+.sed-dialog-popup-inner {
+    width: 90%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    left: 50%;
+    right: 50%;    
+    background-color: #fff;
+    max-width: 700px;
+    position: relative;    
+    padding: 1px;
+}
+
+.rtl .sed-dialog-popup-inner {
+    -webkit-transform: translateY(-50%) translateX(50%);
+    -moz-transform: translateY(-50%) translateX(50%);
+    -ms-transform: translateY(-50%) translateX(50%);
+    -o-transform: translateY(-50%) translateX(50%);
+    transform: translateY(-50%) translateX(50%);
+}
+
+.sed-dialog-popup .sed-dialog-popup-close {
+  position: absolute;
+    top: -20px;
+    right: -20px;
+    background-image: url(images/close.png);
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: center center;
+    width: 40px;
+    height: 40px;
+    display: block;    
+    cursor: pointer;
+}
+
+.rtl-body .sed-dialog-popup .sed-dialog-popup-close {
+    right: auto;
+    left: 0
+}
 
