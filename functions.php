@@ -152,7 +152,7 @@ function sanosan_register_theme_fields( $fields ){
 //add_filter( "sed_theme_options_fields_filter" , 'sanosan_register_theme_fields' , 10000 );
 
 
-//add_action( 'pre_get_posts', 'sanosan_per_page_query' );
+add_action( 'pre_get_posts', 'sanosan_per_page_query' );
 /**
  * Customize category query using pre_get_posts.
  *
@@ -170,7 +170,7 @@ function sanosan_per_page_query( $query ) {
         $query->set( 'posts_per_page', '2' ); //Change this number to anything you like.
     }*/
 
-    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && ( is_tax('video_cat') || is_post_type_archive('omid_video') )  ) {
+    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && is_post_type_archive('sano_faq')  ) {
         $query->set( 'posts_per_page', '100' ); //Change this number to anything you like.
     }
 }

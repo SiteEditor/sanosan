@@ -20,7 +20,7 @@
 	        <div class="single-heading">
 	            <div class="single-heading-inner">
 	                <h3><?php the_title(); ?></h3>
-	                <div class="single-date"><?php echo the_date("Y/m/d"); ?></div>
+	                <div class="single-date"><?php echo twentyseventeen_time_link(); ?><span> <?php echo "&ensp;" . __("hour","sanosan") ."&ensp;".get_the_time(); ?> </span></div>
 	            </div>
 	        </div>
 	        <div class="single-img">        	

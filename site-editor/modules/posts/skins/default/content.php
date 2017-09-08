@@ -32,7 +32,7 @@
                     <div class="tme-info-content">
                         <h4  class="tme-heading"><?php the_title();?></h4>
                         <div class="tme-content"><?php echo $content_post; ?></div>
-                        <div class="tme-date"><?php echo the_date("Y/m/d"); ?></div>
+                        <div class="tme-date"><?php echo twentyseventeen_time_link(); ?></div>
                         <div class="tme-btn"><a href="<?php esc_attr( esc_url( $post_link ) );?>" class="text-first-main"><?php echo __("Read More","sanosan");?></a></div>
                     </div>
                 </div>
